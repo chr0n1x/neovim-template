@@ -105,7 +105,7 @@ After all of that, everything should be set up! `:qa`, reopen and everything is 
 ✅ T9 download success!
 ```
 
-**If anything goes wrong, you should be able to just run `make nuke` and start over.**
+**If anything goes wrong, you should be able to just run `make clean` and start over.**
 
 # Features / Plugins
 
