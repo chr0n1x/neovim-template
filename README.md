@@ -97,7 +97,13 @@ Successfully installed PyYAML-5.4.1 greenlet-1.1.2 ...
 You can now use :COQnow
 ```
 
-After all of that, everything should be set up! `:qa`, reopen and everything is ready for use.
+After all of that, everything should be set up! `:qa`, reopen and everything is ready for use once you see this message (or via `:messages`):
+
+```
+⏳ Downloading T9 ...
+✅ Snippets updated -- ~/.local/share/nvim/site/pack/packer/opt/coq.artifacts/coq+snippets+v2.json
+✅ T9 download success!
+```
 
 **If anything goes wrong, you should be able to just run `make nuke` and start over.**
 
