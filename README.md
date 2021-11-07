@@ -18,6 +18,15 @@ MacOS users have it easy, you should just be able to use `brew` to install every
 
 For other users, you may have to compile `neovim` from source (as of writing this, WSL installations only have access to neovim v0.4.x).
 
+## Quickstart for MacOS Users
+
+```sh
+brew update
+brew install neovim python3
+```
+
+Note that this installs `python3` globally. `python2` may be ok just as long as you have `pip` installed (I haven't tested it 🤪 )
+
 # Usage
 
 1. Click the `Use template` button to the top right 👆
