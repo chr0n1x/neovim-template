@@ -12,4 +12,4 @@ link-configs:
 	-ln -vs $(shell pwd)/nvim $(shell echo $$HOME)/.config/nvim
 
 clean:
-	rm -rf nvm/plugin ~/.local/share/nvim ~/.config/nvim ~/.cache/nvim
+	rm -rf nvim/plugin ~/.local/share/nvim ~/.config/nvim ~/.cache/nvim
