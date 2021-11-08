@@ -15,16 +15,17 @@ end
 
 return require('packer').startup(
   function()
+    use 'wbthomason/packer.nvim'
+    use {'kyazdani42/nvim-web-devicons', after = 'packer.nvim'}
+
     use 'airblade/vim-gitgutter'
     use 'gregsexton/MatchTag'
-    use 'jamestthompson3/nvim-remote-containers'
     use 'kien/ctrlp.vim'
     use 'pseewald/vim-anyfold'
     use 'shaunsingh/nord.nvim'
     use 'tpope/vim-fugitive'
     use 'tpope/vim-surround'
     use 'scrooloose/nerdtree'
-    use 'wbthomason/packer.nvim'
     use 'Yggdroot/indentLine'
 
     use {
@@ -32,7 +33,6 @@ return require('packer').startup(
       requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    use {'kyazdani42/nvim-web-devicons', after = 'packer.nvim'}
     use {
         'hoob3rt/lualine.nvim',
         after = 'nvim-web-devicons',
