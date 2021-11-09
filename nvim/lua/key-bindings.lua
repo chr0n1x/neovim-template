@@ -5,15 +5,27 @@ vim.g.mapleader = ' '
 -- Note that some of these require plugins
 
 -- buffer navigation
-nmap('n', '<leader>s',       ':/<C-r><C-w>/<CR>',                       {noremap = true}) -- highlight the word underneath your cursor
+-- highlight the word underneath your cursor and all instances of it
+nmap('n', '<leader>s',       ':/<C-r><C-w>/<CR>',                       {noremap = true})
 
 -- directory/tree navigation
-nmap('n', '<leader><tab>',   ':NERDTreeToggle<CR>',                     {noremap = true}) -- show dir tree
-nmap('n', '<leader>p',       ':Telescope find_files<CR>',               {noremap = true}) -- fuzzy-find files by path/name
-nmap('n', '<leader>g',       ':Telescope live_grep<CR>',                {noremap = true}) -- live-grep files
 
--- tab navigation
--- Remember: Ctrl + movement-key (h,j,k,l) -- will move your cursor into a different panel
+-- show dir tree
+-- can be used with <leader>m (mouse mode) or you can navigate around with hjkl
+-- 'o' will open dirs
+-- 'O' opens dir recursively
+nmap('n', '<leader><tab>',   ':NERDTreeToggle<CR>',                     {noremap = true})
+
+-- Telescope.nvim fuzzy finders - start typing and GOOOOOO
+-- hitting <enter> selects a file and opens it
+-- <esc><esc> closes the panel
+-- <Ctrl>v -- opens the panel in a split pane veritically
+-- <Ctrl>x -- opens horizontally
+-- <Ctrl> + movement-key (h,j,k,l) -- will move your cursor into a different panel
+nmap('n', '<leader>p',       ':Telescope find_files<CR>',               {noremap = true}) -- fuzzy-find files by path/name
+nmap('n', '<leader>g',       ':Telescope live_grep<CR>',                {noremap = true}) -- live-grep files; requires ripgrep (see readme)
+
+-- tab navigation (not panes like above)
 -- use this along with tabs to fit more on the screen
 nmap('n', '<leader>n',       ':tabnext<CR>',                            {noremap = true}) -- go to next tab
 nmap('n', '<leader>b',       ':tabprevious<CR>',                        {noremap = true}) -- go to previous tab
