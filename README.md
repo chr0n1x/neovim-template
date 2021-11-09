@@ -125,8 +125,7 @@ A few selling points though!
 1. `Leader` is mapped to `<Space>` - so for the next couple of shortcuts, you hit `Spacebar` for `<Leader>`
 1. `<Leader><Tab>` opens up Nerdtree
 1. `<Leader>p` opens up fuzzy-file search
-1. `<Leader>ff` opens up fuzzy-file search UI (via Telescope.nvim)
-1. `<Leader>fg` opens up a live-grep search UI (via Telescope.nvim)
+1. `<Leader>g` opens up a live-grep search UI (via Telescope.nvim)
 1. As stated above - `coq_vim` is installed (insanely fast auto-completion engine)
 
 For a full list of keyboard shortcuts, checkout [the keybindings file](nvim/lua/key-bindings.lua)
