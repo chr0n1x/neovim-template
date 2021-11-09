@@ -20,7 +20,6 @@ return require('packer').startup(
 
     use 'airblade/vim-gitgutter'
     use 'gregsexton/MatchTag'
-    use 'kien/ctrlp.vim'
     use 'pseewald/vim-anyfold'
     use 'shaunsingh/nord.nvim'
     use 'tpope/vim-fugitive'
