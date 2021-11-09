@@ -114,6 +114,14 @@ After all of that, everything should be set up! `:qa`, reopen and everything is 
 ✅ T9 download success!
 ```
 
+## Configuring Yourself
+
+Now that you've made your own configuration repository from this template, remember that you can customize it yourself!
+
+Checkout the [AWESOME NeoVim Repo](https://github.com/rockerBOO/awesome-neovim) for ideas.
+
+Just remember that if you change anything, from plugins to key-bindings, that you will need to `:PackerInstall` or `:PackerSync` and finally a `:PackerCompile`.`
+
 **If anything goes wrong, you should be able to just run `make clean` and start over.**
 
 # Features / Plugins
