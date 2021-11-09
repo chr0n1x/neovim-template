@@ -130,3 +130,10 @@ A few selling points though!
 1. As stated above - `coq_vim` is installed (insanely fast auto-completion engine)
 
 For a full list of keyboard shortcuts, checkout [the keybindings file](nvim/lua/key-bindings.lua)
+
+# Extras
+
+This template tries to keep things minimal. So fonts are omitted, even though some plugins can utilize them. For awesome fonts checkout:
+
+1. [Nerd Fonts / FontForge](https://webinstall.dev/nerdfont/)
+1. When using iTerm2, [turn on glyphs support](https://www.reddit.com/r/vim/comments/ee19ed/til_people_using_iterm2_if_you_see_the_triangular/)
