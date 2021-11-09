@@ -22,7 +22,7 @@ For other users, you may have to compile `neovim` from source (as of writing thi
 
 ```sh
 brew update
-brew install neovim python3
+brew install neovim python3 ripgrep
 ```
 
 Note that this installs `python3` globally. `python2` may be ok just as long as you have `pip` installed (I haven't tested it 🤪 )
@@ -136,7 +136,7 @@ A few selling points though!
 1. `<Leader>g` opens up a live-grep search UI (via Telescope.nvim)
 1. As stated above - `coq_vim` is installed (insanely fast auto-completion engine)
 
-For a full list of keyboard shortcuts, checkout [the keybindings file](nvim/lua/key-bindings.lua)
+For a full list of keyboard shortcuts and details checkout [the keybindings file](nvim/lua/key-bindings.lua)
 
 # Extras
 
