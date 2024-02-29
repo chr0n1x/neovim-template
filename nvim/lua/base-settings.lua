@@ -35,6 +35,7 @@ opts.guifont        = 'Consolas 20'
 opts.laststatus     = 2
 -- ehhh Im on and off w/ this one
 -- opts.mouse          = a
+opts.re             = 0
 opts.regexpengine   = 1
 opts.shiftwidth     = 2
 opts.softtabstop    = 2

@@ -33,7 +33,6 @@ nmap('n', '<leader>o',       ':tabe<space>',                            {noremap
 
 -- misc
 nmap('n', '<leader><space>', ':noh <bar> e<CR>',                        {noremap = true}) -- remove text highlights
-nmap('n', '<leader>G',       ':GitGutterLineHighlightsToggle<CR>',      {noremap = true}) -- toggle git diff line highlights
 nmap('n', '<leader>w',       ':w<CR>',                                  {noremap = true}) -- save current buffer/file
 nmap('n', '<leader>q',       ':q<CR>',                                  {noremap = true}) -- quit/close current buffer/file
 nmap('n', '<leader>m',       ':set mouse=a<CR>',                        {noremap = true}) -- turn ON mouse mode

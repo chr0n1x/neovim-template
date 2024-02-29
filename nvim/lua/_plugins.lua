@@ -18,8 +18,6 @@ return require('packer').startup(
     use 'wbthomason/packer.nvim'
     use {'kyazdani42/nvim-web-devicons', after = 'packer.nvim'}
 
-    use 'airblade/vim-gitgutter'
-    use 'gregsexton/MatchTag'
     use 'pseewald/vim-anyfold'
     use 'shaunsingh/nord.nvim'
     use 'tpope/vim-fugitive'
@@ -35,7 +33,6 @@ return require('packer').startup(
     use {
         'hoob3rt/lualine.nvim',
         after = 'nvim-web-devicons',
-        event = 'VimEnter',
         config = function() require "plugins/lualine" end
     }
 
@@ -50,7 +47,6 @@ return require('packer').startup(
         'ms-jpq/coq_nvim',
         after = 'packer.nvim',
         branch = 'coq',
-        event = 'VimEnter',
         config = function() require "plugins/coq" end
     }
     use {'ms-jpq/coq.artifacts', after = 'coq_nvim', branch = 'artifacts'}
