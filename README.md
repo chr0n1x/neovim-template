@@ -124,6 +124,15 @@ Just remember that if you change anything, from plugins to key-bindings, that yo
 
 **If anything goes wrong, you should be able to just run `make clean` and start over.**
 
+## Using with GNU Stow
+
+The structure of this template is set up so that you can include it as a submodule in your own dotfiles repo.
+
+Steps:
+
+1. make your own copy/fork of this repo (green button at top right of repo)
+2. `git submodule add git@github.com:<username>/<renamed-neovim-template-repo> .config/nvim`
+
 # Features / Plugins
 
 For a full list of features pre-baked, checkout the [`_plugins` file](nvim/lua/_plugins.lua).
