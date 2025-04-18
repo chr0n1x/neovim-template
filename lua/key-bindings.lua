@@ -1,39 +1,31 @@
+
 local nmap = vim.api.nvim_set_keymap
 
 vim.g.mapleader = ' '
 
--- Note that some of these require plugins
+-- these are put here because most of these I consider core functionality
+-- that's ingrained in my muscle memory. There may be more key mappings in the
+-- plugins/ dir tied to specific plugins. in nvim itself, hit <Space> and do
+-- nothing to let the which-key plugin list possible keymappings
 
 -- buffer navigation
--- highlight the word underneath your cursor and all instances of it
-nmap('n', '<leader>s',       ':/<C-r><C-w>/<CR>',                       {noremap = true})
+nmap('n', '<leader>s', ':/<C-r><C-w>/<CR>', {noremap = true, desc = 'Search word underneath cursor.' })
 
--- directory/tree navigation
+-- tab navigation
+nmap('n', '<leader>n', ':tabnext<CR>',     {noremap = true, desc = 'Tab; next' })
+nmap('n', '<leader>b', ':tabprevious<CR>', {noremap = true, desc = 'Tab; prev' })
+nmap('n', '<leader>o', ':tabe<space>',     {noremap = true, desc = 'Tab; open' })
 
--- show dir tree
--- can be used with <leader>m (mouse mode) or you can navigate around with hjkl
--- 'o' will open dirs
--- 'O' opens dir recursively
-nmap('n', '<leader><tab>',   ':NERDTreeToggle<CR>',                     {noremap = true})
+-- editor visuals & "ergonomics"
+nmap('n', '<leader>M', ':set mouse!<CR>', {noremap = true, desc = 'Toggle mouse mode.' })
 
--- Telescope.nvim fuzzy finders - start typing and GOOOOOO
--- hitting <enter> selects a file and opens it
--- <esc><esc> closes the panel
--- <Ctrl>v -- opens the panel in a split pane veritically
--- <Ctrl>x -- opens horizontally
--- <Ctrl> + movement-key (h,j,k,l) -- will move your cursor into a different panel
-nmap('n', '<leader>p',       ':Telescope find_files<CR>',               {noremap = true}) -- fuzzy-find files by path/name
-nmap('n', '<leader>g',       ':Telescope live_grep<CR>',                {noremap = true}) -- live-grep files; requires ripgrep (see readme)
+-- misc 
+nmap('n', '<leader>w',       ':w<CR>',                   {noremap = true, desc = 'Save buff. Or manage sessions.'})
+nmap('n', '<leader><space>', ':noh <bar> e<CR>',         {noremap = true, desc = 'Close any highlights.'})
+nmap('n', '<leader>q',       ':q<CR>',                   {noremap = true, desc = 'Close buffer (:q).'})
+nmap('n', '<leader>md',      ':delm! | delm A-Z0-9<CR>', {noremap = true, desc = 'Marks: Delete all.'})
+nmap('n', 'er',              ':',                        {noremap = true, desc = 'Quick-enter into command mode.'})
 
--- tab navigation (not panes like above)
--- use this along with tabs to fit more on the screen
-nmap('n', '<leader>n',       ':tabnext<CR>',                            {noremap = true}) -- go to next tab
-nmap('n', '<leader>b',       ':tabprevious<CR>',                        {noremap = true}) -- go to previous tab
-nmap('n', '<leader>o',       ':tabe<space>',                            {noremap = true}) -- open new tab
-
--- misc
-nmap('n', '<leader><space>', ':noh <bar> e<CR>',                        {noremap = true}) -- remove text highlights
-nmap('n', '<leader>w',       ':w<CR>',                                  {noremap = true}) -- save current buffer/file
-nmap('n', '<leader>q',       ':q<CR>',                                  {noremap = true}) -- quit/close current buffer/file
-nmap('n', '<leader>m',       ':set mouse=a<CR>',                        {noremap = true}) -- turn ON mouse mode
-nmap('n', '<leader>M',       ':set mouse=c<CR>',                        {noremap = true}) -- turn OFF mouse mode
+-- utility scripts
+-- pretty-format JSON in the current buffer/file
+nmap('n', '<leader>J', ':%!python3 -m json.tool --sort-keys<CR>', {noremap = true, desc = 'Use python to pretty-format JSON' })
